@@ -8,7 +8,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
     }
 )
 export class UserRegisterComponent implements OnInit {
-    private url = "http://localhost:8080/user/register";
+    private url = "http://52.204.84.98:8080/user/register";
     constructor(public http: HttpClient) { }
     ngOnInit() { }
     register() {
@@ -24,7 +24,7 @@ export class UserRegisterComponent implements OnInit {
             }, httpOptions).subscribe((response: any) => { window.alert(response.message); });
     }
     greeting() {
-        const api = 'http://localhost:8080/greeting';
+        const api = 'http://52.204.84.98:8080/greeting';
         const options = {
             headers: new HttpHeaders({
                 'Content-Type': 'application/json'
