@@ -29,14 +29,6 @@
             "scripts": []
           },
           "configurations": {
-            "development": {
-              "buildOptimizer": false,
-              "optimization": false,
-              "vendorChunk": true,
-              "extractLicenses": false,
-              "sourceMap": true,
-              "namedChunks": true
-            },
             "production": {
               "fileReplacements": [
                 {
@@ -70,9 +62,6 @@
             "browserTarget": "angular.io-example:build"
           },
           "configurations": {
-            "development": {
-              "browserTarget": "front:build:development"
-             },
             "production": {
               "browserTarget": "angular.io-example:build:production"
             }
