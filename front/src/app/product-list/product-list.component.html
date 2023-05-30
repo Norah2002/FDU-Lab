@@ -1,0 +1,19 @@
+<mat-list>
+    <h3 mat-subheader>Products</h3>
+    <mat-list-item *ngFor="let product of products; index as productId" >
+        <a mat-line [title]="product.name + ' details'" [routerLink]="['/products', productId]"> {{ product.name }}</a>
+        <p mat-line *ngIf="product.description"> description: {{ product.description }} </p>
+        <app-product-alerts matListItemMeta [product]="product" (notify)="onNotify()"> </app-product-alerts>
+        <button matListItemMeta style="margin-right: 20px;" mat-raised-button color="primary" (click)="share()">Share</button>
+    </mat-list-item>
+</mat-list>
+<mat-list>
+    <h3 mat-subheader>Users</h3>
+    <app-user-register></app-user-register>
+</mat-list>
+
+<!--
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
